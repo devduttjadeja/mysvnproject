@@ -23,9 +23,22 @@ public class CustomerRestController {
 	@Autowired
 	private CustomerDAO customerDAO;
 
+	@Autowired
+	private Customer anyname;
+	
 	
 	@GetMapping("/customers")
 	public List getCustomers() {
+		
+		// print customer bean that we configured in AppConfig class using @Bean
+		
+		System.out.println(anyname.getId());
+		System.out.println(anyname.getFirstName());
+		System.out.println(anyname.getLastName());
+		System.out.println(anyname.getEmail());
+		System.out.println(anyname.getMobile());
+		System.out.println(anyname.getDateOfBirth());
+		
 		return customerDAO.list();
 	}
 
