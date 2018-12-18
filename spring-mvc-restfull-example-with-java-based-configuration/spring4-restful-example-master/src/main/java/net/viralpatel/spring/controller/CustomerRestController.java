@@ -28,7 +28,7 @@ public class CustomerRestController {
 	
 	
 	@GetMapping("/customers")
-	public List getCustomers() {
+	public List<?> getCustomers() {
 		
 		// print customer bean that we configured in AppConfig class using @Bean
 		
